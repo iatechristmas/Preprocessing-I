@@ -4,6 +4,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,7 +22,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -29,6 +30,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html{
+	font-size:62.5%
+}
+
 body {
 	line-height: 1;
 }
@@ -56,4 +62,105 @@ table {
 html, body {
     height: 100%;
 }
+
+body{
+	display:flex;
+	justify-content:center;
+
+}
+
+//flex container for left side of page//
+
+.left-container{
+	width:240px;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	padding: 0 15rem;
+}
+
+//flex container for right side of page//
+
+.right-container{
+	 width:560px;
+	 display:flex;
+	 flex-direction:column;
+	 justify-content:center;
+	 padding: 0 15rem;
+
+}
+
+
+//left side h1//
+h1{
+	.title1();
+}
+
+//left side h2//
+.h2left{
+	.title2left()
+
+}
+//right side h2//
+.h2right{
+	.title2right();
+}
+//right side h3//
+.h3right{
+	.title3right();
+}
+//right side paragraph//
+.job-one p, .job-two p{
+	text-align:left;
+}
+
+
+
+
+
+//right side header 1 mixin//
+.title1(){
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 5rem;
+	text-align: center;
+	text-transform:uppercase;
+}
+
+//left side h2 mixin//
+
+.title2left(){
+	font-family: 'Monsterrat', sans-serif;
+	font-weight:bold;
+	font-size:2rem;
+	text-transform:uppercase;
+}
+
+//right side h2 mixin//
+
+.title2right(){
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2rem;
+	text-align:left;
+
+}
+
+//right side h3 mixin//
+
+.title3right(){
+	text-align:left;
+	
+}
+
+//left side h3 mixin//
+
+.title3left(){
+	font-family: 'Monsterrat', sans-serif;
+	font-weight:bold;
+	font-size:2rem;
+	text-transform:uppercase;
+}
+
 
