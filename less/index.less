@@ -4,6 +4,13 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@color1:#f4f4f4;
+@color2:#6983aa;
+@color3:#8ec6c5;
+@main-font: 'Montserrat', sans-serif;
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,15 +27,20 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Montserrat', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html{
+	font-size:62.5%
+}
+
 body {
 	line-height: 1;
 }
@@ -55,5 +67,202 @@ table {
 
 html, body {
     height: 100%;
+}
+
+body{
+	display:flex;
+	justify-content:center;
+
+	@media(max-width: 500px){
+		flex-direction:column;
+		justify-content:space-between;
+		align-items:center;
+	}
+
+}
+
+//flex container for left side of page//
+.left-container{
+	border: 1px solid black;
+	width:300px;
+	display: flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-content:left;
+	background-color: @color1;
+
+	h1{
+		.title1();
+
+		@media(max-width: 500px){
+			margin:2rem;
+		}
+	}
+
+	.h2left{
+		.title2left()
+	}
+
+	//software engineer title//
+	h5{
+		font-size: 2rem;
+		text-align:center;
+		letter-spacing: .1rem;
+	}
+
+	div p{
+		text-align:center;
+		padding:0 15%;
+		font-size:1.5rem;
+	}
+
+	.personal-profile, .achievements, .address{
+		background-color:@color2;
+		padding-bottom: 2rem;
+
+		@media(max-width: 500px){
+			margin:2rem;
+		}
+	}
+	
+	.address ul li{
+		text-align:center;
+		font-size:1.4rem;
+		margin:0 2.5rem;
+	}
+	
+	.address address{
+		text-align:center;
+	}
+
+	@media(max-width: 500px){
+		width:400px;
+		padding:2rem;
+	}
+}//end of left container//
+
+
+//flex container for right side of page//
+.right-container{
+	border: 1px solid black;
+	width:500px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-evenly;
+	padding-left:5rem;
+	background-color: @color1;
+
+	//right side h2//
+	.h2right{
+	.title2right();
+	}
+
+	//right side h3//
+	h3{
+	font-size: 2rem;
+	font-weight: bold;
+	margin:1rem 0;
+	}
+
+	//right side h4//
+	h4{
+	font-size: 1.8rem;
+	margin:1rem 0;
+	}
+
+	//right side paragraph//
+	div ul li{
+	text-align:left;
+	font-size: 1.2rem;
+	}
+
+	//background color for right sections//
+	.work-history, .academics, .skills{
+	margin-right:5rem;
+
+	@media(max-width: 500px){
+		margin:4rem 0;
+		width:250px;
+	}//media rules for work history, academicsm and skills//
+
+	}
+
+	@media(max-width: 500px){
+		background-color:@color3;
+		width:400px;
+		margin:2rem;
+	}//media rules for right-container//
+
+}//end of right container//
+
+//left side nav bar//
+.nav1{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+
+	a{
+		border: 2px solid black;
+		border-radius: 1rem;
+		text-decoration:none;
+		font-family: 'Montserrat', sans-serif;
+		font-size:2.2rem;
+		text-transform:uppercase;
+		color: black;
+		padding:.5rem;
+		margin: .5rem;
+		background-color:lightgrey;
+		width:25rem;
+
+		&:hover{
+			background-color:white;
+		}
+	}
+}//end of left side nav bar//
+
+/////////////////////start of mixins/////////////////////////
+//left side h1 mixin//
+.title1(){
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 4rem;
+	text-align: center;
+	text-transform:uppercase;
+	letter-spacing:.1rem;
+	background-color:@color3;
+}
+
+//left side h2 mixin//
+.title2left(){
+	font-family: 'Monsterrat', sans-serif;
+	font-weight:bold;
+	font-size:2rem;
+	text-transform:uppercase;
+	text-align:center;
+	margin:2rem;
+}
+
+//right side h2 mixin//
+.title2right(){
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 2rem;
+	text-align:left;
+	text-transform:uppercase;
+	text-decoration:underline;
+	text-underline-position: under;
+	padding-bottom:2rem;
+
+	@media(max-width: 500px){
+		margin:2rem;
+	}
+}
+
+//left side h3 mixin//
+.title3left(){
+	font-family: 'Monsterrat', sans-serif;
+	font-weight:bold;
+	font-size:2rem;
+	text-transform:uppercase;
 }
 

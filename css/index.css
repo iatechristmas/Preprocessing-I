@@ -1,1 +1,303 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC7g4.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  body {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.left-container {
+  border: 1px solid black;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: left;
+  background-color: #f4f4f4;
+}
+.left-container h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-color: #8ec6c5;
+}
+@media (max-width: 500px) {
+  .left-container h1 {
+    margin: 2rem;
+  }
+}
+.left-container .h2left {
+  font-family: 'Monsterrat', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem;
+}
+.left-container h5 {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.left-container div p {
+  text-align: center;
+  padding: 0 15%;
+  font-size: 1.5rem;
+}
+.left-container .personal-profile,
+.left-container .achievements,
+.left-container .address {
+  background-color: #6983aa;
+  padding-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .left-container .personal-profile,
+  .left-container .achievements,
+  .left-container .address {
+    margin: 2rem;
+  }
+}
+.left-container .address ul li {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0 2.5rem;
+}
+.left-container .address address {
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .left-container {
+    width: 400px;
+    padding: 2rem;
+  }
+}
+.right-container {
+  border: 1px solid black;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 5rem;
+  background-color: #f4f4f4;
+}
+.right-container .h2right {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-position: under;
+  padding-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .right-container .h2right {
+    margin: 2rem;
+  }
+}
+.right-container h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.right-container h4 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+.right-container div ul li {
+  text-align: left;
+  font-size: 1.2rem;
+}
+.right-container .work-history,
+.right-container .academics,
+.right-container .skills {
+  margin-right: 5rem;
+}
+@media (max-width: 500px) {
+  .right-container .work-history,
+  .right-container .academics,
+  .right-container .skills {
+    margin: 4rem 0;
+    width: 250px;
+  }
+}
+@media (max-width: 500px) {
+  .right-container {
+    background-color: #8ec6c5;
+    width: 400px;
+    margin: 2rem;
+  }
+}
+.nav1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav1 a {
+  border: 2px solid black;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: lightgrey;
+  width: 25rem;
+}
+.nav1 a:hover {
+  background-color: white;
+}
