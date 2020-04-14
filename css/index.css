@@ -95,6 +95,7 @@ video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -147,44 +148,156 @@ body {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  body {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .left-container {
-  width: 240px;
+  border: 1px solid black;
+  width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 15rem;
+  justify-content: space-around;
+  align-content: left;
+  background-color: #f4f4f4;
 }
-.right-container {
-  width: 560px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 15rem;
-}
-h1 {
+.left-container h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-color: #8ec6c5;
 }
-.h2left {
+@media (max-width: 500px) {
+  .left-container h1 {
+    margin: 2rem;
+  }
+}
+.left-container .h2left {
   font-family: 'Monsterrat', sans-serif;
   font-weight: bold;
   font-size: 2rem;
   text-transform: uppercase;
+  text-align: center;
+  margin: 2rem;
 }
-.h2right {
+.left-container h5 {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.left-container div p {
+  text-align: center;
+  padding: 0 15%;
+  font-size: 1.5rem;
+}
+.left-container .personal-profile,
+.left-container .achievements,
+.left-container .address {
+  background-color: #6983aa;
+  padding-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .left-container .personal-profile,
+  .left-container .achievements,
+  .left-container .address {
+    margin: 2rem;
+  }
+}
+.left-container .address ul li {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0 2.5rem;
+}
+.left-container .address address {
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .left-container {
+    width: 400px;
+    padding: 2rem;
+  }
+}
+.right-container {
+  border: 1px solid black;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 5rem;
+  background-color: #f4f4f4;
+}
+.right-container .h2right {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  text-align: center;
   font-size: 2rem;
   text-align: left;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-position: under;
+  padding-bottom: 2rem;
 }
-.h3right {
-  text-align: left;
+@media (max-width: 500px) {
+  .right-container .h2right {
+    margin: 2rem;
+  }
 }
-.job-one p,
-.job-two p {
+.right-container h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.right-container h4 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+.right-container div ul li {
   text-align: left;
+  font-size: 1.2rem;
+}
+.right-container .work-history,
+.right-container .academics,
+.right-container .skills {
+  margin-right: 5rem;
+}
+@media (max-width: 500px) {
+  .right-container .work-history,
+  .right-container .academics,
+  .right-container .skills {
+    margin: 4rem 0;
+    width: 250px;
+  }
+}
+@media (max-width: 500px) {
+  .right-container {
+    background-color: #8ec6c5;
+    width: 400px;
+    margin: 2rem;
+  }
+}
+.nav1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav1 a {
+  border: 2px solid black;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: lightgrey;
+  width: 25rem;
+}
+.nav1 a:hover {
+  background-color: white;
 }
